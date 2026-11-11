@@ -204,6 +204,25 @@ img{display:block;max-width:100%}
  .hero-count{font-size:8px}
 }
 
+
+/* Full-bleed landscape portrait hero */
+.hero{width:100vw;height:100svh;min-height:100svh;padding:0;overflow:hidden;background:#050505}
+.portrait-wrap{position:absolute;inset:0;width:100%;height:100%;min-height:100%;display:block;overflow:hidden;background:#050505}
+.portrait-wrap:before{inset:-5%;background:radial-gradient(ellipse at 42% 48%,#343434 0%,#151515 55%,#000 100%);filter:blur(28px)}
+.portrait-wrap:after{inset:0;background:linear-gradient(90deg,rgba(0,0,0,.02) 0%,rgba(0,0,0,.06) 42%,rgba(0,0,0,.82) 100%),linear-gradient(0deg,rgba(0,0,0,.35),transparent 28%,transparent 78%,rgba(0,0,0,.18))}
+.portrait{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center center;transform:scaleX(-1);filter:grayscale(1) contrast(1.1) brightness(.82);mix-blend-mode:normal}
+.hero-copy{right:clamp(28px,7vw,112px);width:min(36%,500px);z-index:4}
+.hero-count{z-index:4}
+@media(max-width:800px){
+ .portrait-wrap{width:100%;height:100%}
+ .portrait{object-fit:cover;object-position:38% center}
+ .hero-copy{right:18px;width:48%;bottom:8%;top:auto}
+}
+@media(max-width:540px){
+ .portrait{object-position:34% center}
+ .hero-copy{right:16px;width:52%;bottom:11%}
+}
+
 </style>
 </head>
 <body>
