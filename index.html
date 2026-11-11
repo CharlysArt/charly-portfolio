@@ -141,6 +141,34 @@ img{display:block;max-width:100%}
 .contact-details{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px;position:relative;z-index:1;font-size:12px;color:#c7c7c7}
 .contact-details a:hover{color:#fff}
 @media(max-width:540px){.portfolio-grid{grid-template-columns:1fr;row-gap:34px}.skills-layout{grid-template-columns:1fr;gap:30px}}
+
+.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:54px 28px;align-items:start}
+.project-card{min-width:0}
+.project-card:nth-child(even){margin-top:0}
+.project-card summary{list-style:none;cursor:pointer}
+.project-card summary::-webkit-details-marker{display:none}
+.project-cover{aspect-ratio:1.3;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(22px,4vw,48px);overflow:hidden;position:relative;isolation:isolate}
+.project-cover:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 55%)}
+.project-cover span,.project-cover i{font:9px var(--sans);letter-spacing:.16em;font-style:normal}
+.project-cover strong{font-size:clamp(38px,6vw,78px);line-height:.84;letter-spacing:-.085em;font-weight:600}
+.cover-logos{background:#202020;color:#f4f4f1}
+.cover-feast{background:#a6d83c;color:#173c1d}
+.cover-anc{background:#f4a22d;color:#251b13}
+.cover-aqorex{background:#06134d;color:#eaf6ff}
+.cover-aqorex strong{color:#75dfff}
+.cover-fmt{background:#e9e9e4;color:#182e39}
+.cover-nsche{background:#263b57;color:#fff}
+.cover-goat{background:#151515;color:#f4f4f1}
+.project-open{font:9px var(--sans);letter-spacing:.1em;color:var(--muted);white-space:nowrap}
+.project-card summary:hover .project-open{color:var(--ink)}
+.project-detail{display:grid;grid-template-columns:1fr;gap:22px;padding:25px 0 0;border-top:1px solid var(--line);margin-top:22px}
+.project-detail h3{font-size:clamp(20px,2.4vw,28px);letter-spacing:-.055em;font-weight:500;margin:10px 0}
+.project-detail p{font-size:13px;line-height:1.7;color:var(--muted);max-width:520px}
+.project-names{display:flex;flex-wrap:wrap;gap:8px}
+.project-names span{font-size:10px;padding:8px 10px;border:1px solid var(--line);color:#555}
+.project-card[open] .project-open{color:var(--ink)}
+@media(max-width:540px){.portfolio-grid{grid-template-columns:1fr;gap:36px}.project-cover{aspect-ratio:1.18}.project-cover strong{font-size:clamp(48px,15vw,76px)}}
+
 </style>
 </head>
 <body>
@@ -176,13 +204,34 @@ img{display:block;max-width:100%}
   </div>
   <div class="work-intro"><span>Creative disciplines</span><span>2024 — 2026</span></div>
   <div class="work-grid portfolio-grid">
-<article class="work-card"><div class="work-visual dark"><div class="visual-word">LOGO<small>BRAND MARKS / IDENTITY</small></div></div><div class="work-meta"><div><h3>Logo Designs</h3><p>Selected logo and identity work</p></div><span class="work-number">01</span></div></article>
-<article class="work-card"><div class="work-visual white"><div class="visual-word">LET'S<br>FEAST<small>FOOD / PROMOTION</small></div></div><div class="work-meta"><div><h3>Let's Feast Designs</h3><p>Food and restaurant promotional artwork</p></div><span class="work-number">02</span></div></article>
-<article class="work-card"><div class="work-visual type"><div class="visual-word">ANC<small>RETAIL / CAMPAIGNS</small></div></div><div class="work-meta"><div><h3>ANC Mall Designs</h3><p>Retail campaign and promotional designs</p></div><span class="work-number">03</span></div></article>
-<article class="work-card"><div class="work-visual dark"><div class="visual-word">AQOREX<small>DIGITAL CAMPAIGNS</small></div></div><div class="work-meta"><div><h3>Aqorex Designs</h3><p>Digital campaign visuals</p></div><span class="work-number">04</span></div></article>
-<article class="work-card"><div class="work-visual white"><div class="visual-word">FMT<small>HEALTHCARE</small></div></div><div class="work-meta"><div><h3>FirstMedTrade Designs</h3><p>Healthcare communication and campaign visuals</p></div><span class="work-number">05</span></div></article>
-<article class="work-card"><div class="work-visual frame"><div class="visual-word">NSCHE<br>WEEK<small>EVENT / PROMOTION</small></div></div><div class="work-meta"><div><h3>NSCHE Week Designs</h3><p>Event and promotional design series</p></div><span class="work-number">06</span></div></article>
-<article class="work-card"><div class="work-visual dark"><div class="visual-word">GOAT<small>MEDIA DESIGNS</small></div></div><div class="work-meta"><div><h3>GOAT Media Designs</h3><p>Media and social campaign visuals</p></div><span class="work-number">07</span></div></article>
+    <details class="project-card">
+      <summary><div class="project-cover cover-logos"><span>SELECTED IDENTITIES</span><strong>LOGO<br>DESIGN</strong><i>01 / BRAND IDENTITY</i></div><div class="work-meta"><div><h3>Logo & Brand Identity</h3><p>Identity marks across different industries</p></div><span class="project-open">VIEW PROJECT ↗</span></div></summary>
+      <div class="project-detail"><div><span class="eyebrow">Brand identity / Logo design</span><h3>A collection of visual identities</h3><p>Logo concepts developed for businesses and creative brands, balancing distinct symbols with clear, memorable wordmarks.</p></div><div class="project-names"><span>King Solomon Business School</span><span>GOAT Agency</span><span>The WhatsApp Vanguard</span><span>MagicX Shots</span><span>StylenProfiles</span><span>Nnam’s Couture</span><span>Gerence Fashion House</span><span>Gibsons Collections</span><span>Catura</span><span>Mide’s Hair</span><span>Epic Entertainment</span></div></div>
+    </details>
+    <details class="project-card">
+      <summary><div class="project-cover cover-feast"><span>LET'S FEAST</span><strong>GOOD FOOD.<br>GOOD MOOD.</strong><i>02 / FOOD & HOSPITALITY</i></div><div class="work-meta"><div><h3>Let's Feast</h3><p>Restaurant campaigns and food promotions</p></div><span class="project-open">VIEW PROJECT ↗</span></div></summary>
+      <div class="project-detail"><div><span class="eyebrow">Food / Restaurant campaign</span><h3>Food made worth sharing</h3><p>A lively promotional design collection for Let's Feast, using bold type, energetic food imagery and a fresh green palette.</p></div><div class="project-names"><span>Lunch with friends & family</span><span>Galentine's Feast</span><span>En-route delivery</span><span>Opening announcements</span><span>Weekend food promotions</span></div></div>
+    </details>
+    <details class="project-card">
+      <summary><div class="project-cover cover-anc"><span>A&C MALL</span><strong>EVERYDAY<br>MADE BETTER.</strong><i>03 / RETAIL CAMPAIGNS</i></div><div class="work-meta"><div><h3>ANC Mall</h3><p>Retail, seasonal and product-led campaigns</p></div><span class="project-open">VIEW PROJECT ↗</span></div></summary>
+      <div class="project-detail"><div><span class="eyebrow">Retail / Campaign design</span><h3>Campaigns for everyday discovery</h3><p>A varied set of retail visuals promoting products, shopping moments and seasonal occasions through bold colour and clear messaging.</p></div><div class="project-names"><span>Tequila Day</span><span>Skincare Essentials</span><span>Google search campaign</span><span>Busy Bees</span><span>Shopping promotions</span><span>Boxing Day</span></div></div>
+    </details>
+    <details class="project-card">
+      <summary><div class="project-cover cover-aqorex"><span>AQOREX</span><strong>TRADE<br>SMARTER.</strong><i>04 / FINTECH & DIGITAL</i></div><div class="work-meta"><div><h3>Aqorex</h3><p>Digital trading campaign visuals</p></div><span class="project-open">VIEW PROJECT ↗</span></div></summary>
+      <div class="project-detail"><div><span class="eyebrow">Fintech / Digital campaign</span><h3>Clarity for a trading brand</h3><p>A campaign series built around trading freedom, instant funding, evaluation accounts and profit split messaging, expressed through a crisp blue visual language.</p></div><div class="project-names"><span>Trading freedom</span><span>Instant funding accounts</span><span>Two-step evaluation</span><span>Live funding</span><span>No consistency rule</span><span>100% profit split</span></div></div>
+    </details>
+    <details class="project-card">
+      <summary><div class="project-cover cover-fmt"><span>FIRSTMEDTRADE</span><strong>CARE<br>IN FOCUS.</strong><i>05 / HEALTHCARE</i></div><div class="work-meta"><div><h3>FirstMedTrade</h3><p>Healthcare communication designs</p></div><span class="project-open">VIEW PROJECT ↗</span></div></summary>
+      <div class="project-detail"><div><span class="eyebrow">Healthcare / Brand communication</span><h3>Visual communication for healthcare</h3><p>A collection of healthcare-focused promotional designs for a medical supply and health brand.</p></div><div class="project-names"><span>Healthcare promotions</span><span>Medical supply communication</span></div></div>
+    </details>
+    <details class="project-card">
+      <summary><div class="project-cover cover-nsche"><span>NSCHE WEEK</span><strong>IDEAS INTO<br>EXPERIENCE.</strong><i>06 / EVENT DESIGN</i></div><div class="work-meta"><div><h3>NSCHE Week</h3><p>Event and programme promotion</p></div><span class="project-open">VIEW PROJECT ↗</span></div></summary>
+      <div class="project-detail"><div><span class="eyebrow">Event / Promotional design</span><h3>A visual identity for an event week</h3><p>Event-led artwork created to communicate the NSCHE Week programme and its activities.</p></div></div>
+    </details>
+    <details class="project-card">
+      <summary><div class="project-cover cover-goat"><span>GOAT MEDIA</span><strong>MAKE IT<br>STAND OUT.</strong><i>07 / MEDIA & CREATIVE</i></div><div class="work-meta"><div><h3>GOAT Media</h3><p>Creative and media brand visuals</p></div><span class="project-open">VIEW PROJECT ↗</span></div></summary>
+      <div class="project-detail"><div><span class="eyebrow">Media / Brand design</span><h3>Visuals for a creative media brand</h3><p>A selection of design work associated with GOAT Media, including its brand mark in the identity collection.</p></div></div>
+    </details>
   </div>
 </section>
 
