@@ -1,2 +1,2 @@
-# Charly-portfolio
+# Charly-Portfolio
 CHARLY — Creative Portfolio
