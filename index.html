@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f4f4f1">
-<title>CHARLY — Graphic Designer & Creative Director</title>
-<meta name="description" content="CHARLY is a graphic designer and creative director bringing value to brands through purposeful design.">
+<title>CHARLY — Creative Designer</title>
+<meta name="description" content="CHARLY is a creative designer from Akwa Ibom, Nigeria, creating solution-oriented visual design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700,800&display=swap" rel="stylesheet">
@@ -129,6 +129,18 @@ img{display:block;max-width:100%}
  .footer-links{gap:18px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+.portfolio-grid .work-card:nth-child(even){margin-top:0}
+.portfolio-grid .work-visual{aspect-ratio:1.35}
+.portfolio-grid .visual-word{font-size:clamp(42px,6vw,82px);letter-spacing:-.085em}
+.portfolio-grid .visual-word small{font-size:9px;font-weight:500;letter-spacing:.13em}
+.skills-layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;border-top:1px solid var(--line);padding-top:28px}
+.skills-group{display:flex;flex-direction:column;gap:22px}
+.skill-list,.tool-list{display:flex;flex-wrap:wrap;gap:10px}
+.skill-list span,.tool-list span{font-size:13px;border:1px solid var(--line);padding:10px 13px;border-radius:2px}
+.contact-details{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px;position:relative;z-index:1;font-size:12px;color:#c7c7c7}
+.contact-details a:hover{color:#fff}
+@media(max-width:540px){.portfolio-grid{grid-template-columns:1fr;row-gap:34px}.skills-layout{grid-template-columns:1fr;gap:30px}}
 </style>
 </head>
 <body>
@@ -163,23 +175,14 @@ img{display:block;max-width:100%}
     <p class="section-aside">Ideas shaped with clarity, character and a strong sense of purpose.</p>
   </div>
   <div class="work-intro"><span>Creative disciplines</span><span>2024 — 2026</span></div>
-  <div class="work-grid">
-    <article class="work-card">
-      <div class="work-visual dark"><div class="visual-word">FORM.<small>IDENTITY / SYSTEMS</small></div></div>
-      <div class="work-meta"><div><h3>Brand identity</h3><p>Building recognisable brand worlds</p></div><span class="work-number">01</span></div>
-    </article>
-    <article class="work-card">
-      <div class="work-visual white"><div class="visual-word">SIGNAL.<small>CAMPAIGN / DIGITAL</small></div></div>
-      <div class="work-meta"><div><h3>Digital campaigns</h3><p>Visual communication for culture and commerce</p></div><span class="work-number">02</span></div>
-    </article>
-    <article class="work-card">
-      <div class="work-visual type"><div class="visual-word">The<br>Image.<small>ART DIRECTION / CONCEPT</small></div></div>
-      <div class="work-meta"><div><h3>Creative direction</h3><p>Ideas developed into cohesive visual stories</p></div><span class="work-number">03</span></div>
-    </article>
-    <article class="work-card">
-      <div class="work-visual frame"><div class="visual-word">VISUAL<br>MATTERS.<small>GRAPHIC / EDITORIAL</small></div></div>
-      <div class="work-meta"><div><h3>Visual communication</h3><p>Design made to inform, connect and stay</p></div><span class="work-number">04</span></div>
-    </article>
+  <div class="work-grid portfolio-grid">
+<article class="work-card"><div class="work-visual dark"><div class="visual-word">LOGO<small>BRAND MARKS / IDENTITY</small></div></div><div class="work-meta"><div><h3>Logo Designs</h3><p>Selected logo and identity work</p></div><span class="work-number">01</span></div></article>
+<article class="work-card"><div class="work-visual white"><div class="visual-word">LET'S<br>FEAST<small>FOOD / PROMOTION</small></div></div><div class="work-meta"><div><h3>Let's Feast Designs</h3><p>Food and restaurant promotional artwork</p></div><span class="work-number">02</span></div></article>
+<article class="work-card"><div class="work-visual type"><div class="visual-word">ANC<small>RETAIL / CAMPAIGNS</small></div></div><div class="work-meta"><div><h3>ANC Mall Designs</h3><p>Retail campaign and promotional designs</p></div><span class="work-number">03</span></div></article>
+<article class="work-card"><div class="work-visual dark"><div class="visual-word">AQOREX<small>DIGITAL CAMPAIGNS</small></div></div><div class="work-meta"><div><h3>Aqorex Designs</h3><p>Digital campaign visuals</p></div><span class="work-number">04</span></div></article>
+<article class="work-card"><div class="work-visual white"><div class="visual-word">FMT<small>HEALTHCARE</small></div></div><div class="work-meta"><div><h3>FirstMedTrade Designs</h3><p>Healthcare communication and campaign visuals</p></div><span class="work-number">05</span></div></article>
+<article class="work-card"><div class="work-visual frame"><div class="visual-word">NSCHE<br>WEEK<small>EVENT / PROMOTION</small></div></div><div class="work-meta"><div><h3>NSCHE Week Designs</h3><p>Event and promotional design series</p></div><span class="work-number">06</span></div></article>
+<article class="work-card"><div class="work-visual dark"><div class="visual-word">GOAT<small>MEDIA DESIGNS</small></div></div><div class="work-meta"><div><h3>GOAT Media Designs</h3><p>Media and social campaign visuals</p></div><span class="work-number">07</span></div></article>
   </div>
 </section>
 
@@ -187,24 +190,20 @@ img{display:block;max-width:100%}
   <div class="about-layout">
     <div class="about-heading"><div class="eyebrow">02 / The person behind the work</div><h2 class="section-title">Thoughtful<br>by design.</h2></div>
     <div class="about-copy">
-      <p class="about-lead">I’m CHARLY — a graphic designer and creative director drawn to ideas that make people look twice and brands mean more.</p>
-      <p>I bring strategy and visual craft together to create work with a clear point of view. From identity to campaigns, I care about the details, the message and how every piece contributes to the bigger picture.</p>
-      <p>Good design should do more than look good. It should give an idea direction, make a brand memorable and create value that lasts.</p>
-      <div class="about-signoff">Independent creative practice · Nigeria</div>
+      <p class="about-lead">I’m Okongko Shammah, a creative designer from Akwa Ibom, Nigeria — known professionally as CHARLY.</p>
+      <p>I’m driven by a concrete vision of creating value through solution-oriented designs, using tools such as Adobe Photoshop, Adobe Illustrator and Adobe InDesign.</p>
+      <p>I consider myself a problem-solver: adaptable, imaginative and a source of inspiration. I look forward to contributing my skills, vision and passion to creative projects and collaborations.</p>
+      <div class="about-signoff">Creative designer · Akwa Ibom, Nigeria</div>
     </div>
   </div>
 </section>
 
 <section class="section" id="services">
-  <div class="section-top">
-    <div><div class="eyebrow">03 / What I bring</div><h2 class="section-title">The work<br>behind the work.</h2></div>
-    <p class="section-aside">A considered approach from first thought to final visual.</p>
-  </div>
-  <div class="services-list">
-    <article class="service-row"><span class="service-no">01</span><h3>Brand identity</h3><p>Distinct visual systems that give brands a recognisable voice.</p></article>
-    <article class="service-row"><span class="service-no">02</span><h3>Campaign design</h3><p>Purposeful creative for launches, promotions and brand moments.</p></article>
-    <article class="service-row"><span class="service-no">03</span><h3>Digital design</h3><p>Social and digital visuals built to connect with the right audience.</p></article>
-    <article class="service-row"><span class="service-no">04</span><h3>Creative direction</h3><p>Clear concepts and visual direction that bring ideas together.</p></article>
+  <div class="section-top"><div><div class="eyebrow">03 / Skills & tools</div><h2 class="section-title">Creative skills.<br>Practical tools.</h2></div><p class="section-aside">The disciplines and software named in my portfolio.</p></div>
+  <div class="skills-layout">
+    <div class="skills-group"><span class="eyebrow">Skills</span><div class="skill-list"><span>Graphic Design</span><span>Visual Design</span><span>Digital Artist</span></div></div>
+    <div class="skills-group"><span class="eyebrow">Tools</span><div class="tool-list"><span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>Adobe InDesign</span></div></div>
+    <div class="skills-group"><span class="eyebrow">Languages</span><div class="skill-list"><span>English</span><span>Ibibio</span></div></div>
   </div>
 </section>
 
@@ -213,14 +212,14 @@ img{display:block;max-width:100%}
     <div class="eyebrow">04 / Have something in mind?</div>
     <h2>Let's make<br>it matter.</h2>
     <p>Have a brand to build, an idea to shape or a project worth making memorable? Let's talk.</p>
-    <a class="contact-link" href="mailto:charlyjnr727@gmail.com">Start a conversation <span>↗</span></a>
+    <a class="contact-link" href="mailto:charlyjnr727@gmail.com">Email me <span>↗</span></a><div class="contact-details"><a href="tel:+2347013562939">+234 701 356 2939</a><a href="https://instagram.com/charlys_art__" target="_blank" rel="noreferrer">@charlys_art__ ↗</a></div>
   </div>
 </section>
 </main>
 
 <footer class="footer">
   <span>© 2026 CHARLY. All rights reserved.</span>
-  <div class="footer-links"><a href="#top">Back to top ↑</a><a href="mailto:charlyjnr727@gmail.com">Email ↗</a></div>
+  <div class="footer-links"><a href="#top">Back to top ↑</a><a href="mailto:charlyjnr727@gmail.com">Email ↗</a><a href="https://instagram.com/charlys_art__" target="_blank" rel="noreferrer">Instagram ↗</a></div>
   <span>Designed with intention.</span>
 </footer>
 </div>
